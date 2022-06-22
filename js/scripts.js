@@ -1,3 +1,5 @@
 alert('Hello World');
-// Variables
-let favoriteFood = 'pho'
+
+// Variable
+let favoriteFood = 'Pho'
+document.write(favoriteFood)
