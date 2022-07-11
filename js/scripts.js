@@ -21,14 +21,16 @@ let pokemonRepository = (function() {
 })();
 // End of IIFE wrap.
 
-for (let i=0; i<pokemonList.length; i++){
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ').' );
+let pokemonList = pokemonRepository.getAll();
 
-    if(pokemonList[i].height > 6 ) {
-        document.write(' Wow, that\'s big!'+ '<br>');
-    } else if(pokemonList[i].height <7 && pokemonList[i].height >5) {
-        document.write(' That\'s average.' + '<br>');
+pokemonList.forEach(function (pokemon) {
+    if (pokemon.height > 6) {
+        document.write(`${pokemon.name} <br> Height: ${pokemon.height} - Wow, thats's big! <br> <p>`)
+    } else if (pokemon.height < 7 && pokemon.height > 5) {
+        document.write(`${pokemon.name} <br> Height: ${pokemon.height} - That's average. <br> <p>`)
     } else {
-        document.write(' That\'s pretty small.' + '<br>');
+        document.write(`${pokemon.name} <br> Height: ${pokemon.height} - That's pretty small. <br> <p>`)
     }
-}
+})
+// ${} didn't work the first few times when using it, look in to that later.
+// Remember that you can use html in js
