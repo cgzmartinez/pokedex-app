@@ -1,1 +1,13 @@
-
+.button-class {
+  background-color: #d14081; /* magenta, tentative style */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.6s;
+  border-radius: 3px
+}
